@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Valley View Conference Center</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/demo.css" />
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <h1>Valley View Conference Center</h1>
+
+      <nav>
+        <ul id="nav"></ul>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="tblRow">
+        <h2>VVCC Image Map</h2>
+
+        <article class="tblCell">
+          <img
+            src="images/conferenceCenter_500x300.png"
+            usemap="#image_map"
+            style="margin-left: 30px"
+          />
+          <map name="image_map">
+            <area
+              alt="Sycamore"
+              title="Sycamore"
+              href="cc/sycamore.html"
+              coords="6,16,64,91"
+              shape="rect"
+              target="myFrame"
+            />
+            <area
+              alt="Dogwood"
+              title="Dogwood"
+              href="cc/dogwood.html"
+              coords="7,96,65,164"
+              shape="rect"
+              target="myFrame"
+            />
+            <area
+              alt="Redbud"
+              title="Redbud"
+              href="cc/redbud.html"
+              coords="7,170,64,246"
+              shape="rect"
+              target="myFrame"
+            />
+            <area
+              alt="Oak"
+              title="Oak"
+              href="cc/oak.html"
+              coords="117,16,272,95"
+              shape="rect"
+              target="myFrame"
+            />
+            <area
+              alt="Walnut"
+              title="Walnut"
+              href="cc/walnut.html"
+              coords="118,153,278,245"
+              shape="rect"
+              target="myFrame"
+            />
+            <area
+              alt="Hickory"
+              title="Hickory"
+              href="cc/hickory.html"
+              coords="364,14,477,101"
+              shape="rect"
+              target="myFrame"
+            />
+            <area
+              alt="Cedar"
+              title="Cedar"
+              href="cc/cedar.html"
+              coords="374,138,476,221"
+              shape="rect"
+              target="myFrame"
+            />
+          </map>
+          <p class="splitCap leftCap">
+            The Valley View Conference Center is located 45 minutes from
+            downtown Kansas City, Missouri and is designed to meet your every
+            conferencing need.
+          </p>
+        </article>
+
+        <article class="tblCell">
+          <iframe
+            id="myFrame"
+            name="myFrame"
+            width="500px"
+            height="300px"
+            src="cc/conference1.html"
+          >
+          </iframe>
+          <p class="splitCap">
+            Our conference rooms have everything you would expect for a
+            first-class meeting, banquet, or seminar. Contact us and schedule
+            your meeting today!
+          </p>
+        </article>
+      </section>
+    </div>
+
+    <footer class="footer"><p class="copy" id="copy"></p></footer>
+    <script src="js/pages.js"></script>
+  </body>
+</html>

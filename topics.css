@@ -1,0 +1,23 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+.lefter {
+  background-color: lavender;
+  border: 3px solid brown;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+.righty {
+  background-color: lavender;
+  border: 3px solid #036;
+  border-radius: 10px;
+}
+.halfer {
+  min-width: 550px;
+  min-height: 550px;
+}
+.listTop {
+  margin-top: 10px;
+}

@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  /* CSS Style Comment */
+  box-sizing: border-box;
+}
+body {
+  font: 16px/1.2 Verdana;
+  background-color: #666;
+}
+p,
+h2,
+h3 {
+  margin-bottom: 1.2rem;
+}
+header {
+  width: 100vw;
+  min-height: 150px;
+  background-color: rgb(94, 10, 42);
+}
+header h1 {
+  text-align: center;
+  color: bisque;
+  margin-bottom: 40px;
+  font: 45px Georgia;
+}
+header nav {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+nav ul {
+  max-width: 90vw;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+nav ul li a:link,
+nav ul li a:visited {
+  padding: 10px 25px;
+  background-color: bisque;
+  border-radius: 10px;
+  text-decoration: none;
+  color: darkred;
+  margin-right: 7px;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: brown;
+  color: bisque;
+  box-shadow: 2px 2px #0004;
+  transition: all 0.3s;
+  outline: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  min-width: 1200px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+section {
+  background-color: lavender;
+  min-width: 78vw;
+  padding: 10px;
+}
+.lightFont {
+  color: bisque;
+}
+article,
+p,
+div {
+  padding: 5px;
+}
+aside {
+  min-width: 17vw;
+  background-color: darkred;
+  color: bisque;
+  padding: 15px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+  background-color: rgb(94, 10, 42);
+  color: bisque;
+  width: 100vw;
+}
+footer a:link,
+footer a:visited {
+  color: rgb(248, 163, 51);
+  text-decoration: none;
+}
+footer a:hover,
+footer a:focus {
+  color: bisque;
+  text-decoration: underline;
+}
+footer p {
+  font-size: 0.8rem;
+}
+a:link,
+a:visited {
+  color: brown;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+.righter {
+  /* same as ralph, for example use */
+  width: 45vw;
+  min-height: 500px;
+  margin-left: 1.5rem;
+  background-color: lightblue;
+  padding: 1.5rem;
+}
+.eighty {
+  min-height: 80%;
+  background-color: bisque;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.border {
+  border: 1px solid #0004;
+  border-radius: 0.8rem;
+}
+.copy {
+  font-size: 0.8rem;
+}
+.tr {
+  display: table-row;
+  min-width: 80%;
+  margin: 0 auto;
+  background-color: #0007;
+}
+.split {
+  display: table-cell;
+  width: 40%;
+  height: max-content;
+  /* min-width: 48% !important; */
+  /* max-width: 48% !important; */
+}
+.splitLeft {
+  display: table-cell;
+  width: 50%;
+}
+.splitRight {
+  display: table-cell;
+  width: 50%;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+}
+.halfer {
+  min-width: 500px;
+}
+.forty {
+  min-width: 400px;
+}
+.sixty {
+  min-width: 600px;
+  height: 500px;
+}
+.back {
+  /* background: url('../images/cardBackgrounds/blockchain.jpg'); */
+  background-size: cover;
+  background-position: 0, 0;
+  min-width: 50%;
+}
+.cover {
+  width: 100%;
+  height: 100%;
+
+  color: #fff;
+  text-align: center;
+}
+figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: justify;
+}
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='time'],
+textarea {
+  font: 0.8rem Verdana;
+  letter-spacing: 1px;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  margin-left: 15px;
+  margin-top: 5px;
+  width: 300px;
+}
+input[type='text']#zip {
+  width: 70px;
+}
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 8px;
+  justify-content: space-between;
+  flex: 1 0 220px;
+  list-style: none;
+}
+ul.rad {
+  max-width: 50%;
+}
+ul.check {
+  max-width: 70%;
+}
+select {
+  font: 0.8rem Verdana;
+  letter-spacing: 1px;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+input + span {
+  padding-right: 30px;
+  padding-left: 0px;
+}
+input:invalid + span:after {
+  position: absolute;
+  content: '*'; /* content: '✖'; '\2716' */
+  padding-left: 0px;
+  color: #8b0000;
+  font-size: 2rem;
+}
+
+span.pattern {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+input:valid + span:after {
+  position: absolute;
+  content: '\2713'; /* content: '✓'; */
+  padding-left: 5px;
+  color: #009000;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+span.pattern {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+.formBtn {
+  padding: 10px 25px;
+  background-color: brown;
+  color: bisque;
+  border-radius: 10px;
+  border-width: 0;
+  margin: 10px;
+}
+.formBtn:hover,
+.formBtn:focus {
+  background-color: bisque;
+  color: brown;
+  box-shadow: 2px 2px #0004;
+  transition: all 0.3s;
+  outline: none;
+}
+.breaker::after {
+  content: '\A';
+  white-space: pre;
+}

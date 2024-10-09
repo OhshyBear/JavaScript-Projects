@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VVCC - Breakout Listing</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/template.css" />
+    <link rel="stylesheet" href="css/topics.css" />
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <h1>Valley View Conference Center</h1>
+      <nav>
+        <ul id="nav"></ul>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="flex">
+        <article class="split lefter halfer">
+          <h3>Breakout Topic Listings</h3>
+          <p>Create a list of Breakout Classes for your meeting</p>
+          <form>
+            <!-- // speaker, topic, time, room, duration -->
+            <p>
+              <label for="topic">Topic: </label><br />
+              <input
+                type="text"
+                name="topic"
+                id="topic"
+                required
+                placeholder="Topic of breakout class ..."
+              />
+              <span class="err"></span>
+            </p>
+            <p>
+              <label for="speaker">Speaker: </label><br />
+              <input
+                type="text"
+                name="speaker"
+                id="speaker"
+                required
+                placeholder="Who will lead this class?"
+              />
+              <span class="err"></span>
+            </p>
+            <p>
+              <label for="time">Meeting Time (hour, minute, AM/PM): </label
+              ><br />
+              <input type="time" name="time" id="time" required />
+              <span class="err"></span>
+            </p>
+            <p>
+              <label for="room">Room: </label>
+              <select name="room" id="room">
+                <option>-select-</option>
+              </select>
+              <label for="duration"> &nbsp;Duration: </label>
+              <select id="duration" name="duration">
+                <option>-select-</option>
+              </select>
+              hour(s)
+            </p>
+            <p>
+              <button type="button" id="frmButton" class="formBtn">
+                Add Listing
+              </button>
+            </p>
+          </form>
+        </article>
+        <article class="split righty halfer">
+          <h3>Listings</h3>
+          <p>Your list of breakout meetings:</p>
+          <div id="response"></div>
+        </article>
+      </section>
+    </div>
+    <footer class="footer">
+      <p class="copy" id="copy">
+        Copyright &copy; 2020 <a href="#">Mikima Trails Enterprises, LLC</a> All
+        Rights Reserved
+      </p>
+    </footer>
+    <script src="js/pages.js"></script>
+    <script src="js/topic.js"></script>
+  </body>
+</html>

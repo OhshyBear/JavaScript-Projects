@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VVCC - Build Invitation</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/template.css" />
+    <link rel="stylesheet" href="css/annc.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Valley View Conference Center</h1>
+      <nav>
+        <ul id="nav"></ul>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="flex2">
+        <article class="splitLeft">
+          <h3 id="anncHeader">Build Your Announcement!</h3>
+
+          <form name="invitation" id="invitation">
+            <div id="pickBg" class="hide">
+              <p>Choose a Background:</p>
+              <br class="breaker" />
+              <div class="dispGrid">
+                <label for="blueRad">
+                  <div class="radDiv blueRad">
+                    <input
+                      type="radio"
+                      name="background"
+                      id="blueRad"
+                      value="blueRad"
+                    />
+                  </div>
+                </label>
+                <label for="blueLin45">
+                  <div class="radDiv blueLin45">
+                    <input
+                      type="radio"
+                      name="background"
+                      id="blueLin45"
+                      value="blueLin45"
+                    />
+                  </div>
+                </label>
+                <label for="redLin180">
+                  <div class="radDiv redLin180">
+                    <input
+                      type="radio"
+                      name="background"
+                      id="redLin180"
+                      value="redLin180"
+                    /></div
+                ></label>
+                <label for="redRad">
+                  <div class="radDiv redRad">
+                    <input
+                      type="radio"
+                      name="background"
+                      id="redRad"
+                      value="redRad"
+                    />
+                  </div>
+                </label>
+                <label for="greenRad">
+                  <div class="radDiv greenRad">
+                    <input
+                      type="radio"
+                      name="background"
+                      id="greenRad"
+                      value="greenRad"
+                    />
+                  </div>
+                </label>
+                <label for="greenLin250">
+                  <div class="radDiv greenLin250">
+                    <input
+                      type="radio"
+                      name="background"
+                      id="greenLin250"
+                      value="greenLin250"
+                    />
+                  </div>
+                </label>
+                <label for="greenLin90">
+                  <div class="radDiv greenLin90">
+                    <input
+                      type="radio"
+                      name="background"
+                      id="greenLin90"
+                      value="greenLin90"
+                    />
+                  </div>
+                </label>
+                <label for="dkRedLin">
+                  <div class="radDiv dkRedLin">
+                    <input
+                      type="radio"
+                      name="background"
+                      id="dkRedLin"
+                      value="dkRedLin"
+                    />
+                  </div>
+                </label>
+              </div>
+              <br class="breaker" />
+              <button id="return" class="formBtn">Return to Beginning</button>
+              <button id="preSelect" class="formBtn">Preview Background</button>
+              <button id="submit" class="formBtn">Submit Selections</button>
+            </div>
+            <div id="pickFont" class="hide">
+              <h3>Choose a Font:</h3>
+              <input
+                type="radio"
+                name="font"
+                id="font_Georgia"
+                value="Georgia"
+                onclick="setFont(this.value)"
+              />
+              <label for="font_Georgia" class="georgia">Georgia 2609</label
+              ><br />
+              <input
+                type="radio"
+                name="font"
+                id="font_TNR"
+                value="Times New Roman"
+                onclick="setFont(this.value)"
+              />
+              <label for="font_TNR" class="TNR">Times New Roman 2609</label
+              ><br />
+
+              <input
+                type="radio"
+                name="font"
+                id="font_Arial"
+                value="Arial"
+                onclick="setFont(this.value)"
+              />
+              <label for="font_Arial" class="Arial">Arial 2609</label><br />
+              <input
+                type="radio"
+                name="font"
+                id="font_arialBlack"
+                value="Arial Black"
+                onclick="setFont(this.value)"
+              />
+              <label for="font_arialBlack" class="arialBlack"
+                >Arial Black 2609</label
+              ><br />
+              <input
+                type="radio"
+                name="font"
+                id="font_Cursive"
+                value="Cursive"
+                onclick="setFont(this.value)"
+              />
+              <label for="font_Cursive" class="cursive">Cursive 2609</label
+              ><br />
+
+              <button id="nextToBg" class="formBtn">Next</button>
+            </div>
+            <div id="invText" class="display">
+              <p>Add the Meeting Parameters:</p>
+              <label for="title">Meeting Title: </label
+              ><input
+                type="text"
+                maxlength="40"
+                name="title"
+                id="title"
+              /><br />
+
+              <label>Choose the date:</label><br />
+              <label for="month">Month:</label>
+              <select id="month" name="month">
+                <option selected>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+              </select>
+              <label for="day">Day:</label>
+              <select id="day" name="day">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <label for="year">Year: </label>
+              <input
+                type="text"
+                id="year"
+                name="year"
+                value="2021"
+                readonly
+                maxlength="4"
+                style="width: 35px"
+              />
+              <br />
+              <label for="time">Time: </label>
+              <input type="time" id="time" />
+              <br />
+              <label for="room">Meeting Room:</label>
+              <select id="room">
+                <option>Sycamore</option>
+                <option>Dogwood</option>
+                <option>Redbud</option>
+                <option>Oak</option>
+                <option>Walnut</option>
+                <option>Hickory</option>
+                <option>Cedar</option>
+              </select>
+              <br />
+              <label>Message:</label> <br />
+              <textarea id="message" name="message"></textarea>
+              <br />
+              <button id="addText" class="formBtn">Preview</button>
+              <button id="fontSelect" class="formBtn">Next</button>
+            </div>
+          </form>
+        </article>
+        <article class="splitRight back dkRedLin" id="card">
+          <div class="cover" id="cover">
+            <h2 id="invTitle">Invitation Title</h2>
+            <p id="dateTime">First Invitation Line</p>
+            <h2 id="roomName">The Room</h2>
+            <p id="invMsg">
+              Capitalize on low hanging fruit to identify a ballpark value added
+              activity to beta test. Override the digital divide with additional
+              clickthroughs from DevOps. Nanotechnology immersion along the
+              information highway will close the loop on focusing solely on the
+              bottom line.
+            </p>
+            <div class="bottom">
+              <h2>Valley View Conference Center</h2>
+              <p>
+                11224 Holmes Road<br />Kansas City, Missouri 64131 <br />
+                Call VALLEYVIEW ((825) 538-8439) TODAY!
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h1>Thank You!</h1>
+        </div>
+        <!-- Modal content -->
+        <div class="modal-content">
+          <p>
+            Your announcement selections will be reviewed and you will get a
+            response within 2 business days confirming selections. If the design
+            is approved, you will also get a sample of the announcement. Be sure
+            to check it for accuracy.
+          </p>
+          <p>
+            Click the button below to be redirected to the Home page or click
+            the X at top right to review your submission.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <p><button id="homePg" class="formBtn">Home</button></p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p class="copy" id="copy"></p>
+    </footer>
+    <script src="js/pages.js"></script>
+    <script src="js/annc.js"></script>
+  </body>
+</html>

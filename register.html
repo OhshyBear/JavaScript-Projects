@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VVCC - Register</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<!-- Header -->
+  <header>
+    <h1>Valley View Conference Center</h1>
+      <nav>
+      <!-- the UL fills from the pages.js file  -->
+        <ul id="nav"></ul>  
+      </nav>
+  </header>
+  <!-- Centering Container for all content -->
+  <div class="container">
+    <!-- This section contains the form for the registration -->
+    <section id="frmBox" class="show">
+    <form id="frmRegister">
+      <fieldset><legend>Business Address</legend>
+    <p><label for="businessName"><strong>Name of your business:</strong></label><br>
+       <input type="text" name="businessName" id="businessName" required placeholder="Business Name">
+       <span class="err"></span>
+    </p>
+    <p><strong>Contact Person:</strong> <br>
+        <label for="contactName">Name: </label>
+        <input type="text" name="contactName" id="contactName" required placeholder="Contact Name">
+        <span class="err"></span>
+        <label for="contactPhone"> Phone:</label><input type="tel" placeholder="Enter your phone #" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}" id="contactPhone"><span class="pattern" id="ptrnPhone"> nnnnnnnnnn</span> <!-- \([0-9]{3}\) [0-9]{3}-[0-9]{4} [0-9]{3}.[0-9]{3}.[0-9]{4}--> 
+        <!-- The patterns are regular expressions. The commented versions are variants of phone patterns. To keep it simple, just use the one that's there already -->
+    </p>
+    <p><strong>Business Address:</strong> <br>
+        <label for="street">Street: </label><input type="text" name="street" id="street" placeholder="Enter your street address" required>
+        <span class="err"></span>
+        <label for="city">City: </label><input type="text" name="city" id="city" placeholder="Enter your City" required>
+        <span class="err"></span>
+        <!-- I only included the states that surround Missouri. 
+        Feel free to add or subtract -->
+        <label for="state">State: </label> <select id="state">
+            <option value="Arkansas">AR</option>
+            <option value="Illinois">IL</option>
+            <option value="Iowa">IO</option>
+            <option value="Kansas">KS</option>
+            <option value="Kentucky">KY</option>
+            <option value="Missouri">MO</option>
+            <option value="Nebraska">NE</option>
+            <option value="Oklahoma">OK</option>
+            <option value="Tennessee">TN</option>
+        </select>
+        <input type="text" name="zip" id="zip" placeholder="12345" required pattern="[0-9]{5}"><span class="err"></span>
+    </p>
+    </fieldset>
+    <fieldset><legend>Business Data</legend>
+    <p><strong>Number of Employees:</strong> <br>
+        <ul class="flex-inner rad">
+            <li>
+                <input type="radio" name="numEmp" id="zero-to-twentyfive" value="0-25">
+                <label for="zero-to-twentyfive">0-25</label>
+            </li>
+            <li>
+                <input type="radio" name="numEmp" id="twentyfive-to-fifty" value="25-50">
+                <label for="twentyfive-to-fifty">25-50</label>
+            </li>
+            <li>
+                <input type="radio" name="numEmp" id="fifty-to-eighty" value="50-80">
+                <label for="fifty-to-eighty">50-80</label>
+            </li>
+            <li>
+                <input type="radio" name="numEmp" id="eighty-to-onehundred" value="80-100">
+                <label for="eighty-to-onehundred">80-100</label>
+            </li>
+            <li>
+                <input type="radio" name="numEmp" id="more-than-onehundred" value="100+">
+                <label for="more-than-onehundred">> 100</label>
+            </li>
+        </ul>
+    </p>
+    <p><strong>Industry Afilliations:</strong> <br>
+        <ul class="flex-inner check">
+            <li>
+                <input type="checkbox" name="industry" id="service" value=" Service">
+                <label for="service">Service</label>
+            </li>
+            <li>
+                <input type="checkbox" name="industry" id="technology" value=" Technology">
+                <label for="technology">Technology</label>
+            </li>
+            <li>
+                <input type="checkbox" name="industry" id="manufacturing" value=" Manufacturing">
+                <label for="manufacturing">Manufacturing</label>
+            </li>
+            <li>
+                <input type="checkbox" name="industry" id="finance" value=" Finance">
+                <label for="finance">Finance</label>
+            </li>
+            <li>
+                <input type="checkbox" name="industry" id="education" value=" Education">
+                <label for="education">Education</label>
+            </li>
+            <li>
+                <input type="checkbox" name="industry" id="other" value=" other" onclick="showBox(this)">
+                <label for="other">Other</label>
+            </li>
+        </ul>
+        
+        <input type="text" name="otherIndustry" id="otherIndustry" placeholder="List other industries here" class="hide"></p>
+        </fieldset>
+        <fieldset>
+        <!-- I included the terms() function for you. This is an example of how to build a function called from a checkbox or radiobutton  -->
+        <p><button type="button" id="btnSubmit" class="formBtn" disabled>Submit</button>
+        <input type="checkbox" name="agree" id="agree" onchange="terms(this)"><label id="forAgree" for="agree"> Check this box to verify that you have read, understand, and agree to the <a href="#">Terms of Service.</a></label>
+        </p>
+        </fieldset>
+    </p>
+    </form>
+    </section>
+    <!-- 
+      This section is where you will build the table and display the data from the form.
+      NOTE the id, then look in the CSS that is specific to this page (register.css)
+     -->
+    <section id="dataDisplay" class="hide">
+        <h3>Your Business Registration Data:</h3>
+        <p id='reg'></p>
+        <button class="formBtn" id="edit" type="button">Edit Data</button>
+    </section>
+<!-- below (</div>) is the end of the centering container -->
+  </div>
+  <!-- This is the modal that should display when the user clicks the submit data button -->
+  <div id="myModal" class="modal">
+        <div class="modal-container">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h1>Thank You!</h1>
+          </div>
+          <!-- Modal content -->
+          <div class="modal-content">
+            <p>Your registration will be reviewed and you will get a response within 2 business days confirming your date and rental agreement.</p>
+            <p>Click the button below to be redirected to the Home page or click the X at top right to review your submission.</p>
+          </div>
+          <div class="modal-footer"><p><button id="homePg" class="formBtn">Home</button></p></div>
+        </div>
+      </div>
+      <!-- ^^^ End of the modal ^^^ -->
+  <footer class="footer">
+  <!-- The footer paragraph is populated by page.js -->
+      <p class="copy" id="copy"></p>
+  </footer>
+  <script src="js/pages.js"></script>
+  <script src="js/register.js"></script>
+  
+    <script>
+    // below is the function that  activates the submit button when the radio button is checked
+    function terms(item) {
+      if (item.checked) {
+        document.getElementById('btnSubmit').removeAttribute('disabled');
+      } else {
+        document.getElementById('btnSubmit').setAttribute('disabled', 'disabled');
+      }
+    }
+    // add todo list here
+    </script>
+</body>
+</html>
